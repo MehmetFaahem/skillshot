@@ -17,13 +17,13 @@ import profile from "../assets/profile.png";
 
 const HeroSection = () => {
   return (
-    <div className="bg-[#245D51] w-[100%] h-[680px] p-6">
+    <div className="bg-[#245D51] w-[100%] h-auto p-6 px-[75px] overflow-hidden">
       <Header />
       <div className="mt-[80px] flex flex-row place-content-center justify-between">
         <div className="w-[40%] relative">
           <img
             src={lineVector}
-            className="w-[240px] absolute top-[80px] right-[120px]"
+            className="w-[240px] absolute top-[80px] right-[20%]"
             alt=""
           />
           <h1 className="text-6xl font-semibold text-white leading-[90px]">

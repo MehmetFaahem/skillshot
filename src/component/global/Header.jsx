@@ -10,7 +10,7 @@ const Header = () => {
   };
 
   return (
-    <header className="flex flex-row justify-between items-center mb-8 p-4 bg-transparent">
+    <header className="flex flex-row justify-between items-center mb-8 bg-transparent">
       <h1 className="text-3xl font-bold">
         <span className="text-[#ffffff]">Skill</span>{" "}
         <span className="text-[#CB8461]">Shoot</span>
