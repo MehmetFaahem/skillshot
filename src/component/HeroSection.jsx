@@ -15,23 +15,23 @@ import JoinNowCard from "./snippets/JoinNowCard";
 
 const HeroSection = () => {
   return (
-    <div className="bg-[#245D51] w-[100%] h-auto p-6 px-[75px] overflow-hidden">
+    <div className="bg-[#245D51] w-[100%] h-auto p-6 px-[24px] lg:px-[75px] overflow-hidden">
       <Header />
-      <div className="mt-[80px] flex flex-row place-content-center justify-between">
-        <div className="w-[40%] relative">
+      <div className="mt-[80px] flex flex-col lg:flex-row place-content-center justify-between">
+        <div className="w-full lg:w-[40%] relative">
           <img
             src={lineVector}
-            className="w-[240px] absolute top-[80px] right-[20%]"
+            className="w-[130px] lg:w-[230px] absolute top-[50px] lg:top-[80px] right-[30px] lg:right-[80px]"
             alt=""
           />
-          <h1 className="text-6xl font-semibold text-white leading-[90px]">
+          <h1 className="text-4xl lg:text-6xl text-center lg:text-left font-medium lg:font-semibold text-white leading-[60px] lg:leading-[90px]">
             There is always something new for us to learn
           </h1>
-          <h4 className="text-xl font-normal text-[#b8b4b4] leading-[40px] mt-[20px]">
+          <h4 className="text-[13px] lg:text-xl text-center lg:text-left font-normal text-[#b8b4b4] leading-[35px] lg:leading-[40px] mt-[20px]">
             we have created more than 100+ materials on various things that will
             help your career, with mentors who are experienced in their fields.
           </h4>
-          <div className="mt-4 flex place-items-center space-x-5">
+          <div className="mt-4 flex flex-col lg:flex-row place-items-center space-x-0 space-y-6 lg:space-y-0 lg:space-x-5">
             <a
               href="#"
               className="bg-[#CB8461] text-white w-[155px] font-bold px-2 py-2 rounded flex place-items-center space-x-3"
@@ -75,12 +75,28 @@ const HeroSection = () => {
             </div>
           </div>
         </div>
-        <div className="w-[40%] relative">
-          <PencilButton className="top-10" />
-          <PlayButton className="top-[150px] left-[320px]" />
-          <CalendarButton className="bottom-12 left-[380px]" />
-          <img src={GenZ} alt="" className="size-auto" />
-          <JoinNowCard className="top-[220px] left-[-130px]" />
+        <div className="w-full lg:w-[40%] relative">
+          <PencilButton
+            fieldSize={"size-[40px]"}
+            iconSize={"15px"}
+            className="top-[-460px] lg:top-10 lg:right-[450px] lg:left-auto left-[0px]"
+          />
+          <PlayButton
+            fieldSize={"size-[40px]"}
+            iconSize={"15px"}
+            className="top-[-50px] lg:top-[150px] right-[0px] lg:left-[350px]"
+          />
+          <CalendarButton
+            fieldSize={"size-[40px]"}
+            iconSize={"15px"}
+            className="bottom-12 left-[0px] lg:left-[380px] "
+          />
+          <img
+            src={GenZ}
+            alt=""
+            className="size-auto hidden lg:flex absolute bottom-[-30px]"
+          />
+          <JoinNowCard className="top-[220px] left-[-130px] hidden lg:flex" />
         </div>
       </div>
     </div>

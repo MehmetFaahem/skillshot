@@ -5,6 +5,7 @@ import avatar2 from "../assets/profile5.png";
 import avatar3 from "../assets/profile6.png";
 import { faArrowLeft, faArrowRight } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import SquareWithShadow from "./snippets/SquareWithShadow";
 
 const testimonials = [
   {
@@ -12,6 +13,7 @@ const testimonials = [
     name: "Jason Bay",
     review:
       "I am quite satisfied, because the skills I want or dream of can really be mastered",
+    isHighlighted: false,
   },
   {
     imageSrc: avatar2,
@@ -25,23 +27,36 @@ const testimonials = [
     name: "Alexa Nowan",
     review:
       "I am quite satisfied, because the skills I want or dream of can really be mastered",
+    isHighlighted: false,
   },
 ];
 
 const TestimonialSection = () => {
+  const sorted =
+    screen.availWidth < 600
+      ? [...testimonials].filter((a) => a.isHighlighted)
+      : testimonials;
   return (
-    <section className="flex flex-col justify-center items-center px-5 py-12 w-full bg-stone-50 sm:px-8 md:px-12 lg:px-16 xl:px-20 2xl:px-24">
+    <section className="flex relative flex-col justify-center items-center px-5 py-[50px] lg:py-12 w-full bg-stone-50 sm:px-8 md:px-12 lg:px-16 xl:px-20 2xl:px-24">
+      <div className="flex lg:hidden opacity-100 rotate-[-30deg] absolute top-[20px] right-[40px] flex-col items-center self-end px-1 pt-2 mt-7 bg-green-800/90 rounded-full h-[22px] w-[22px]">
+        <div className="flex z-10 shrink-0 rounded-full bg-green-800/60 bg-opacity-70 h-[17px] w-[17px] sm:-mr-0.2" />
+      </div>
       <div className="flex flex-col items-center w-full max-w-[1174px]">
-        <h2 className="text-3xl font-semibold text-center sm:text-4xl">
+        <h2 className="text-[16px] lg:text-3xl font-semibold text-center sm:text-4xl">
           <span className="text-zinc-800">What do they</span>{" "}
           <span className="text-[#CB8461]">say?</span>
         </h2>
-        <p className="mt-2.5 text-base leading-9 text-center text-zinc-500 max-w-full">
+        <SquareWithShadow
+          color={"#245D51"}
+          className={"flex lg:hidden left-[35px] top-[43px] rotate-[100deg]"}
+          size={"30px"}
+        />
+        <p className="mt-[30px] lg:mt-2.5 text-[14px] lg:text-base leading-[30px] lg:leading-9 text-center text-zinc-500 max-w-[90%]">
           This is an honest review from members who have joined us
         </p>
         <div className="self-stretch mt-8 sm:mt-10 lg:mt-12">
           <div className="flex flex-col gap-5 sm:flex-row">
-            {testimonials.map((testimonial, index) => (
+            {sorted.map((testimonial, index) => (
               <div
                 key={index}
                 className={`flex flex-col ${

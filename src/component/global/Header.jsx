@@ -1,6 +1,7 @@
-import { faBars, faX } from "@fortawesome/free-solid-svg-icons";
+import { faX } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import React, { useState } from "react";
+import MenuIcon from "../../assets/menuIcon.png";
 
 const Header = () => {
   const [isDrawerOpen, setIsDrawerOpen] = useState(false);
@@ -41,34 +42,28 @@ const Header = () => {
         className="block md:hidden text-white focus:outline-none"
         onClick={toggleDrawer}
       >
-        <FontAwesomeIcon
-          icon={faBars}
-          style={{
-            color: "white",
-            height: "30px",
-            width: "30px",
-          }}
-        />
+        <img src={MenuIcon} className="size-auto" alt="" />
       </button>
 
       {/* Drawer */}
       <div
-        className={`fixed top-0 right-0 h-full w-64 bg-gray-800 p-8 transform transition-transform ${
+        className={`fixed top-0 z-[99999] right-0 h-full w-64 bg-gray-800 p-8 transform transition-transform ${
           isDrawerOpen ? "translate-x-0" : "translate-x-full"
         }`}
       >
         <button
-          className="text-white mb-8 focus:outline-none"
+          className="text-white mb-8 focus:outline-none flex place-items-center gap-1"
           onClick={toggleDrawer}
         >
           <FontAwesomeIcon
             icon={faX}
             style={{
               color: "white",
-              height: "10px",
-              width: "10px",
+              height: "15px",
+              width: "15px",
             }}
           />
+          <span>Close</span>
         </button>
         <nav className="flex flex-col space-y-4">
           {["Home", "Course", "Subscribe", "About", "Testimonial"].map(

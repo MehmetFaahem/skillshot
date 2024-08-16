@@ -1,6 +1,7 @@
 import { faCheck } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import React from "react";
+import shadow from "../../assets/shadow.png";
 
 function PlanCard({
   title,
@@ -23,11 +24,14 @@ function PlanCard({
         isPopular ? "lg:-mt-4" : "lg:mt-4"
       }`}
     >
-      <div className={`${cardClass} h-full`}>
+      <div className={`${cardClass} h-full relative`}>
         {isPopular && (
           <div className="self-end mb-5 px-5 py-1.5 text-white mr-5 text-xs font-semibold tracking-wider text-center bg-[#CB8461] rounded-2xl">
             MOST POPULAR
           </div>
+        )}
+        {isPopular && (
+          <img src={shadow} className="absolute size-auto right-0" alt="" />
         )}
         <div
           className={`flex flex-col items-start ${
@@ -35,9 +39,9 @@ function PlanCard({
           } w-full h-full`}
         >
           <div className={`flex gap-2.5 ${textClass}`}>
-            <div className="text-4xl font-bold">{price}</div>
+            <div className="text-[26px] lg:text-4xl font-bold">{price}</div>
             <div
-              className={`self-start mt-4 text-base leading-9 ${
+              className={`self-start mt-0 lg:mt-4 text-base leading-9 ${
                 isPopular ? "text-white" : "text-black/60"
               }`}
             >
@@ -47,12 +51,12 @@ function PlanCard({
           <h2
             className={`${
               isPopular ? "mt-3" : "mt-1"
-            } text-3xl font-bold ${textClass}`}
+            } text-[26px] lg:text-3xl font-bold ${textClass}`}
           >
             {title}
           </h2>
           <p
-            className={`my-4 text-xl leading-9 ${
+            className={`my-4 text-[14px] lg:text-lg leading-9 ${
               isPopular ? "text-white" : "text-black/60"
             }`}
           >
@@ -77,7 +81,7 @@ function PlanCard({
                   }}
                 />
               </div>
-              <div className="flex-1">{feature}</div>
+              <div className="flex-1 text-[13px] lg:text-lg">{feature}</div>
             </div>
           ))}
           <button

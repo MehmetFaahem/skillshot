@@ -8,20 +8,20 @@ import Logo5 from "../assets/image 15.png";
 
 const TrustedCompanies = () => {
   return (
-    <div className="flex flex-col justify-center items-center h-[400px]">
-      <h2 className="font-semibold text-4xl text-black text-center mt-[80px]">
+    <div className="flex flex-col justify-center items-center h-auto lg:h-[400px]">
+      <h2 className="font-semibold text-xl lg:text-4xl text-black text-center mt-[50px] lg:mt-[80px]">
         Trusted more than <span className="text-[#CB8461]">100+</span> in the
         world
       </h2>
       <Paragraph
-        className="text-center w-[50%]"
+        className="text-center w-[90%] lg:w-[50%]"
         text="
         they have asked us more than 3 times to teach their employees about
         various things. to improve their skills"
       />
-      <div className="flex place-items-center space-x-[80px] mt-14">
+      <div className="flex flex-wrap place-items-center place-content-center justify-center items-center gap-[50px] lg:gap-[80px] mt-8 lg:mt-14">
         {[Logo1, Logo2, Logo3, Logo4, Logo5].map((img) => (
-          <img src={img} alt="" className="size-auto" />
+          <img src={img} alt="" className="w-[140px]" />
         ))}
       </div>
     </div>

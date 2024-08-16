@@ -4,11 +4,11 @@ function Footer() {
   const navItems = ["Home", "Course", "Subscribe", "About", "Testimoni"];
 
   return (
-    <footer className="flex flex-wrap gap-5 justify-between self-stretch mt-10 w-full sm:mt-36 sm:max-w-full">
+    <footer className="flex flex-col-reverse lg:flex-row items-center flex-wrap gap-5 lg:justify-between self-stretch mt-10 w-full sm:mt-36 sm:max-w-full">
       <h2 className="text-2xl font-bold text-[#CB8461]">
         <span className="text-white">Skill </span>Shoot
       </h2>
-      <nav className="flex gap-8 my-auto text-lg whitespace-nowrap text-white text-opacity-60 sm:max-w-full">
+      <nav className="flex flex-col text-center lg:text-left lg:flex-row gap-8 my-[50px] lg:my-auto text-lg whitespace-nowrap text-white text-opacity-60 sm:max-w-full">
         {navItems.map((item, index) => (
           <a
             key={index}

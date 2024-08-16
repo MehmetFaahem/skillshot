@@ -5,7 +5,7 @@ const TestimonialCard = ({ imageSrc, name, review, isHighlighted = false }) => {
   return (
     <div
       className={`flex flex-col items-center text-center ${
-        isHighlighted ? "pt-12 bg-white rounded-xl" : "self-stretch my-auto"
+        isHighlighted ? "py-12 bg-white rounded-xl" : "self-stretch my-auto"
       }`}
     >
       <img
@@ -22,7 +22,7 @@ const TestimonialCard = ({ imageSrc, name, review, isHighlighted = false }) => {
       />
       <h3 className="mt-6 text-2xl text-zinc-800">{name}</h3>
       <p
-        className={`mt-2.5 text-base leading-9 text-zinc-500 ${
+        className={`mt-2.5 text-[14px] lg:text-base leading-[35px] lg:leading-9 text-zinc-500 ${
           isHighlighted ? "w-[318px]" : "self-stretch"
         }`}
       >
