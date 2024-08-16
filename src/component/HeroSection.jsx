@@ -8,12 +8,10 @@ import {
 } from "@fortawesome/free-brands-svg-icons";
 import lineVector from "../assets/Vector.png";
 import GenZ from "../assets/genz.png";
-import {
-  faCalendarDays,
-  faCirclePlay,
-  faPencil,
-} from "@fortawesome/free-solid-svg-icons";
-import profile from "../assets/profile.png";
+import PencilButton from "./buttons/PencilButton";
+import PlayButton from "./buttons/PlayButton";
+import CalendarButton from "./buttons/CalendarButton";
+import JoinNowCard from "./snippets/JoinNowCard";
 
 const HeroSection = () => {
   return (
@@ -78,56 +76,11 @@ const HeroSection = () => {
           </div>
         </div>
         <div className="w-[40%] relative">
-          <div className="bg-[#F88C3D] absolute top-10 items-center flex place-content-center size-[60px] rounded-xl rotate-[-10deg]">
-            <FontAwesomeIcon
-              icon={faPencil}
-              style={{
-                color: "white",
-                height: "25px",
-                width: "25px",
-              }}
-            />
-          </div>
-          <div className="bg-[#7252A4] absolute top-[150px] left-[320px] items-center flex place-content-center size-[60px] rounded-xl rotate-[10deg]">
-            <FontAwesomeIcon
-              icon={faCirclePlay}
-              style={{
-                color: "white",
-                height: "25px",
-                width: "25px",
-              }}
-            />
-          </div>
-          <div className="bg-[#23BDEE] absolute bottom-12 left-[380px] items-center flex place-content-center size-[60px] rounded-xl rotate-[-10deg]">
-            <FontAwesomeIcon
-              icon={faCalendarDays}
-              style={{
-                color: "white",
-                height: "25px",
-                width: "25px",
-              }}
-            />
-          </div>
+          <PencilButton className="top-10" />
+          <PlayButton className="top-[150px] left-[320px]" />
+          <CalendarButton className="bottom-12 left-[380px]" />
           <img src={GenZ} alt="" className="size-auto" />
-          <div className="bg-white/80 flex flex-col justify-center space-y-3 rounded-xl absolute top-[220px] left-[-130px] backdrop-blur-sm w-[260px] h-[140px]">
-            <div className="flex justify-center  items-center space-x-3">
-              <img src={profile} className="size-[40px]" alt="" />
-              <div>
-                <h1 className="text-[#2C2C2C] font-bold text-sm">
-                  Learn basic ui ux design
-                </h1>
-                <h1 className="text-[#2C2C2C] font-light text-sm">
-                  Today at 12 PM
-                </h1>
-              </div>
-            </div>
-            <a
-              href="#"
-              className="bg-[#FF4F8E] text-white px-4 py-2 w-[110px] ml-[71px] rounded-md"
-            >
-              Join Now
-            </a>
-          </div>
+          <JoinNowCard className="top-[220px] left-[-130px]" />
         </div>
       </div>
     </div>

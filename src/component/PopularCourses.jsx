@@ -1,10 +1,10 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import CourseCard from "./snippets/CourseCard";
 import SquareWithShadow from "./snippets/SquareWithShadow";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faArrowLeft, faArrowRight } from "@fortawesome/free-solid-svg-icons";
 
-const coursesData = [
+let coursesData = [
   {
     id: 1,
     title: "Basics of learning team management",
@@ -56,6 +56,7 @@ const coursesData = [
 ];
 
 function PopularCourses() {
+  const [data, setData] = useState(coursesData);
   return (
     <section className="flex flex-col h-auto px-20 mx-auto py-20 w-full bg-[#245D51] relative">
       <SquareWithShadow
@@ -77,7 +78,30 @@ function PopularCourses() {
         </p>
       </div>
       <div className="mt-12 relative">
-        <div className="justify-center absolute top-[230px] left-[25px] z-[9999] items-center flex bg-[#ffffff] size-[50px] rounded-full border-[#F5F5F5] border-[4px]">
+        <button
+          onClick={() => {
+            setData([
+              {
+                id: Date.now(),
+                title: "Learn basic database structure",
+                image:
+                  "https://cdn.builder.io/api/v1/image/assets/TEMP/c199796b076522e1164c54b28e9918206b3fe9ec2b06b9a75ba01b71be99ebbe?placeholderIfAbsent=true&apiKey=2372ca227ccb46eeb978f53bfef9667b",
+                icon: "https://cdn.builder.io/api/v1/image/assets/TEMP/235df2766ff0343318a58f4e3872e586b26f11d33a6965052d29b3eeeeac357f?placeholderIfAbsent=true&apiKey=2372ca227ccb46eeb978f53bfef9667b",
+                instructor: {
+                  name: "Roynaldo Jr",
+                  role: "Data Science",
+                  avatar:
+                    "https://cdn.builder.io/api/v1/image/assets/TEMP/c9ce652ac162aff306c3dd00eb621fb0e7dd10918cae213be079b8aa12b49d59?placeholderIfAbsent=true&apiKey=2372ca227ccb46eeb978f53bfef9667b",
+                },
+                participants: 55,
+                price: 180,
+                videoCount: 20,
+              },
+              ...data.slice(0, data.length - 1),
+            ]);
+          }}
+          className="cursor-pointer justify-center absolute top-[230px] left-[25px] z-[9999] items-center flex bg-[#ffffff] size-[50px] rounded-full border-[#F5F5F5] border-[4px]"
+        >
           <FontAwesomeIcon
             icon={faArrowLeft}
             style={{
@@ -86,8 +110,32 @@ function PopularCourses() {
               color: "black",
             }}
           />
-        </div>
-        <div className="justify-center absolute top-[230px] right-[25px] z-[9999] items-center flex bg-[#245D51] size-[50px] rounded-full border-[#F5F5F5] border-[4px]">
+        </button>
+        <button
+          onClick={() => {
+            setData([
+              {
+                id: Date.now(),
+                title: "Learn basic database structure",
+                image:
+                  "https://cdn.builder.io/api/v1/image/assets/TEMP/0ec0b310b0e79333fca6df56fdd2a4825ad6ba36719db843a03b4af82bcffd2a?placeholderIfAbsent=true&apiKey=2372ca227ccb46eeb978f53bfef9667b",
+                icon: "https://cdn.builder.io/api/v1/image/assets/TEMP/235df2766ff0343318a58f4e3872e586b26f11d33a6965052d29b3eeeeac357f?placeholderIfAbsent=true&apiKey=2372ca227ccb46eeb978f53bfef9667b",
+                instructor: {
+                  name: "Roynaldo Jr",
+                  role: "Data Science",
+                  avatar:
+                    "https://cdn.builder.io/api/v1/image/assets/TEMP/c9ce652ac162aff306c3dd00eb621fb0e7dd10918cae213be079b8aa12b49d59?placeholderIfAbsent=true&apiKey=2372ca227ccb46eeb978f53bfef9667b",
+                },
+                participants: 55,
+                price: 180,
+                videoCount: 20,
+              },
+
+              ...data.slice(0, data.length - 1),
+            ]);
+          }}
+          className="justify-center absolute top-[230px] right-[25px] z-[9999] items-center flex bg-[#245D51] size-[50px] rounded-full border-[#F5F5F5] border-[4px]"
+        >
           <FontAwesomeIcon
             icon={faArrowRight}
             style={{
@@ -96,9 +144,9 @@ function PopularCourses() {
               color: "white",
             }}
           />
-        </div>
+        </button>
         <div className="flex gap-5 flex-wrap justify-center items-center">
-          {coursesData.map((course) => (
+          {data.slice(0, 3).map((course) => (
             <CourseCard key={course.id} {...course} />
           ))}
         </div>
