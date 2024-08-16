@@ -1,7 +1,4 @@
-import { useState } from "react";
-import reactLogo from "./assets/react.svg";
-import viteLogo from "/vite.svg";
-import "./App.css";
+import { Fragment } from "react";
 import HeroSection from "./component/HeroSection";
 import TrustedCompanies from "./component/TrustedCompanies";
 import Discount from "./component/Discount";
@@ -15,7 +12,7 @@ import SubscriptionFooter from "./component/SubscriptionFooter";
 
 function App() {
   return (
-    <>
+    <Fragment>
       <HeroSection />
       <TrustedCompanies />
       <Discount />
@@ -26,7 +23,7 @@ function App() {
       <SubscriptionPlans />
       <Testimonial />
       <SubscriptionFooter />
-    </>
+    </Fragment>
   );
 }
 

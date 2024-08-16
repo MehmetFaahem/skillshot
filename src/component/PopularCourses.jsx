@@ -3,19 +3,24 @@ import CourseCard from "./snippets/CourseCard";
 import SquareWithShadow from "./snippets/SquareWithShadow";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faArrowLeft, faArrowRight } from "@fortawesome/free-solid-svg-icons";
+import thumb1 from "../assets/thumbnail1.png";
+import thumb2 from "../assets/thumbnail2.png";
+import thumb3 from "../assets/thumbnail3.png";
+import playButton from "../assets/playButton.png";
+import avatar1 from "../assets/avatar1.png";
+import avatar2 from "../assets/avatar2.png";
+import avatar3 from "../assets/avatar3.png";
 
 let coursesData = [
   {
     id: 1,
     title: "Basics of learning team management",
-    image:
-      "https://cdn.builder.io/api/v1/image/assets/TEMP/ca4f0e6a3ab73937ea1c2de9081e0518eef544b2a101b84319d81a3679d50be0?placeholderIfAbsent=true&apiKey=2372ca227ccb46eeb978f53bfef9667b",
-    icon: "https://cdn.builder.io/api/v1/image/assets/TEMP/fce04988215957a23f97e2a35bd341725cfb2cbc5cede69e5e89261d2c61c79b?placeholderIfAbsent=true&apiKey=2372ca227ccb46eeb978f53bfef9667b",
+    image: thumb1,
+    icon: playButton,
     instructor: {
       name: "Jone Owel",
       role: "IT Manager",
-      avatar:
-        "https://cdn.builder.io/api/v1/image/assets/TEMP/7b978d1629b3ae63c0f5157b81eeb14cec772cc480df09e210298254a62fe08b?placeholderIfAbsent=true&apiKey=2372ca227ccb46eeb978f53bfef9667b",
+      avatar: avatar1,
     },
     participants: 120,
     price: 120,
@@ -24,14 +29,12 @@ let coursesData = [
   {
     id: 2,
     title: "Learn basic database structure",
-    image:
-      "https://cdn.builder.io/api/v1/image/assets/TEMP/c199796b076522e1164c54b28e9918206b3fe9ec2b06b9a75ba01b71be99ebbe?placeholderIfAbsent=true&apiKey=2372ca227ccb46eeb978f53bfef9667b",
-    icon: "https://cdn.builder.io/api/v1/image/assets/TEMP/235df2766ff0343318a58f4e3872e586b26f11d33a6965052d29b3eeeeac357f?placeholderIfAbsent=true&apiKey=2372ca227ccb46eeb978f53bfef9667b",
+    image: thumb2,
+    icon: playButton,
     instructor: {
       name: "Roynaldo Jr",
       role: "Data Science",
-      avatar:
-        "https://cdn.builder.io/api/v1/image/assets/TEMP/c9ce652ac162aff306c3dd00eb621fb0e7dd10918cae213be079b8aa12b49d59?placeholderIfAbsent=true&apiKey=2372ca227ccb46eeb978f53bfef9667b",
+      avatar: avatar2,
     },
     participants: 55,
     price: 180,
@@ -40,14 +43,12 @@ let coursesData = [
   {
     id: 3,
     title: "Create dynamic website with basic php",
-    image:
-      "https://cdn.builder.io/api/v1/image/assets/TEMP/0ec0b310b0e79333fca6df56fdd2a4825ad6ba36719db843a03b4af82bcffd2a?placeholderIfAbsent=true&apiKey=2372ca227ccb46eeb978f53bfef9667b",
-    icon: "https://cdn.builder.io/api/v1/image/assets/TEMP/8ac23e136c7485693dff39e0cca8089506751e58806e847ac12bed46452ea856?placeholderIfAbsent=true&apiKey=2372ca227ccb46eeb978f53bfef9667b",
+    image: thumb3,
+    icon: playButton,
     instructor: {
       name: "Markus Low",
       role: "Programer",
-      avatar:
-        "https://cdn.builder.io/api/v1/image/assets/TEMP/d3c774a1b8848aa63411d935ff97641aad594daf9507721090a64aa6fd141a37?placeholderIfAbsent=true&apiKey=2372ca227ccb46eeb978f53bfef9667b",
+      avatar: avatar3,
     },
     participants: 98,
     price: 135,
@@ -82,16 +83,14 @@ function PopularCourses() {
           onClick={() => {
             setData([
               {
-                id: Date.now(),
+                id: 2,
                 title: "Learn basic database structure",
-                image:
-                  "https://cdn.builder.io/api/v1/image/assets/TEMP/c199796b076522e1164c54b28e9918206b3fe9ec2b06b9a75ba01b71be99ebbe?placeholderIfAbsent=true&apiKey=2372ca227ccb46eeb978f53bfef9667b",
-                icon: "https://cdn.builder.io/api/v1/image/assets/TEMP/235df2766ff0343318a58f4e3872e586b26f11d33a6965052d29b3eeeeac357f?placeholderIfAbsent=true&apiKey=2372ca227ccb46eeb978f53bfef9667b",
+                image: thumb2,
+                icon: playButton,
                 instructor: {
                   name: "Roynaldo Jr",
                   role: "Data Science",
-                  avatar:
-                    "https://cdn.builder.io/api/v1/image/assets/TEMP/c9ce652ac162aff306c3dd00eb621fb0e7dd10918cae213be079b8aa12b49d59?placeholderIfAbsent=true&apiKey=2372ca227ccb46eeb978f53bfef9667b",
+                  avatar: avatar2,
                 },
                 participants: 55,
                 price: 180,
@@ -115,16 +114,14 @@ function PopularCourses() {
           onClick={() => {
             setData([
               {
-                id: Date.now(),
+                id: 2,
                 title: "Learn basic database structure",
-                image:
-                  "https://cdn.builder.io/api/v1/image/assets/TEMP/0ec0b310b0e79333fca6df56fdd2a4825ad6ba36719db843a03b4af82bcffd2a?placeholderIfAbsent=true&apiKey=2372ca227ccb46eeb978f53bfef9667b",
-                icon: "https://cdn.builder.io/api/v1/image/assets/TEMP/235df2766ff0343318a58f4e3872e586b26f11d33a6965052d29b3eeeeac357f?placeholderIfAbsent=true&apiKey=2372ca227ccb46eeb978f53bfef9667b",
+                image: thumb2,
+                icon: playButton,
                 instructor: {
                   name: "Roynaldo Jr",
                   role: "Data Science",
-                  avatar:
-                    "https://cdn.builder.io/api/v1/image/assets/TEMP/c9ce652ac162aff306c3dd00eb621fb0e7dd10918cae213be079b8aa12b49d59?placeholderIfAbsent=true&apiKey=2372ca227ccb46eeb978f53bfef9667b",
+                  avatar: avatar2,
                 },
                 participants: 55,
                 price: 180,

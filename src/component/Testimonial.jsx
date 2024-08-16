@@ -1,25 +1,27 @@
 import React from "react";
 import TestimonialCard from "./snippets/TestimonialCard";
+import avatar1 from "../assets/profile4.png";
+import avatar2 from "../assets/profile5.png";
+import avatar3 from "../assets/profile6.png";
+import { faArrowLeft, faArrowRight } from "@fortawesome/free-solid-svg-icons";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
 const testimonials = [
   {
-    imageSrc:
-      "https://cdn.builder.io/api/v1/image/assets/TEMP/76e41921589aa898ebd5d181b4085a789e1191178a289f435946a47c6e5dec85?placeholderIfAbsent=true&apiKey=2372ca227ccb46eeb978f53bfef9667b",
+    imageSrc: avatar1,
     name: "Jason Bay",
     review:
       "I am quite satisfied, because the skills I want or dream of can really be mastered",
   },
   {
-    imageSrc:
-      "https://cdn.builder.io/api/v1/image/assets/TEMP/07b0393185a8e942968eef92a498e6bf352d8d1b7a82dd75579901bec33cc7a4?placeholderIfAbsent=true&apiKey=2372ca227ccb46eeb978f53bfef9667b",
+    imageSrc: avatar2,
     name: "Nany Brugman",
     review:
       "I am quite satisfied, because the skills I want or dream of can really be mastered",
     isHighlighted: true,
   },
   {
-    imageSrc:
-      "https://cdn.builder.io/api/v1/image/assets/TEMP/765dfb90fad8412d9829f0ea01ac0e485e300824948b1c29805f416a3880ba68?placeholderIfAbsent=true&apiKey=2372ca227ccb46eeb978f53bfef9667b",
+    imageSrc: avatar3,
     name: "Alexa Nowan",
     review:
       "I am quite satisfied, because the skills I want or dream of can really be mastered",
@@ -51,12 +53,28 @@ const TestimonialSection = () => {
             ))}
           </div>
         </div>
-        <img
-          loading="lazy"
-          src="https://cdn.builder.io/api/v1/image/assets/TEMP/1a297ebe052119760b7e1362de52777beb04b18b46d3406939dfaa09fa70d3f4?placeholderIfAbsent=true&apiKey=2372ca227ccb46eeb978f53bfef9667b"
-          alt=""
-          className="object-contain mt-8 max-w-full aspect-[2.3] w-[154px] sm:mt-10 lg:mt-12"
-        />
+      </div>
+      <div className="flex space-x-[20px] place-items-center mt-[50px]">
+        <button className="cursor-pointer justify-center items-center flex bg-[#ffffff] size-[50px] rounded-full border-[#F5F5F5] border-[4px]">
+          <FontAwesomeIcon
+            icon={faArrowLeft}
+            style={{
+              width: "25px",
+              height: "25px",
+              color: "black",
+            }}
+          />
+        </button>
+        <button className="justify-center items-center flex bg-[#CB8461] size-[50px] rounded-full border-[#F5F5F5] border-[4px]">
+          <FontAwesomeIcon
+            icon={faArrowRight}
+            style={{
+              width: "25px",
+              height: "25px",
+              color: "white",
+            }}
+          />
+        </button>
       </div>
     </section>
   );

@@ -5,7 +5,7 @@ function Footer() {
 
   return (
     <footer className="flex flex-wrap gap-5 justify-between self-stretch mt-10 w-full sm:mt-36 sm:max-w-full">
-      <h2 className="text-2xl font-bold text-red-400">
+      <h2 className="text-2xl font-bold text-[#CB8461]">
         <span className="text-white">Skill </span>Shoot
       </h2>
       <nav className="flex gap-8 my-auto text-lg whitespace-nowrap text-white text-opacity-60 sm:max-w-full">

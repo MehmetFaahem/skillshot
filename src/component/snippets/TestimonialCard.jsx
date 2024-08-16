@@ -1,4 +1,5 @@
 import React from "react";
+import star from "../../assets/star.png";
 
 const TestimonialCard = ({ imageSrc, name, review, isHighlighted = false }) => {
   return (
@@ -15,7 +16,7 @@ const TestimonialCard = ({ imageSrc, name, review, isHighlighted = false }) => {
       />
       <img
         loading="lazy"
-        src="https://cdn.builder.io/api/v1/image/assets/TEMP/e86264f6f496e09802dfbd8c6e066488aefd13bccc760cc59c7f428e0acde949?placeholderIfAbsent=true&apiKey=2372ca227ccb46eeb978f53bfef9667b"
+        src={star}
         alt=""
         className="object-contain mt-4 max-w-full aspect-[8.26] w-[107px]"
       />

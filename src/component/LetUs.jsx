@@ -32,7 +32,7 @@ const cardData = [
 
 const Card = ({ data }) => {
   return (
-    <div className="flex place-items-center space-x-4 w-[300px]">
+    <div className="flex place-items-center space-x-4 w-[270px]">
       <div className="bg-[#F6E8E1] flex justify-center items-center size-[58px] rounded-full">
         <FontAwesomeIcon
           icon={data.icon}

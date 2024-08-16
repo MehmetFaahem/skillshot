@@ -1,6 +1,11 @@
 import React from "react";
 import StatCard from "./snippets/StatCard";
 import FeatureCard from "./snippets/FeatureCard";
+import solid1 from "../assets/solid1.png";
+import solid2 from "../assets/solid2.png";
+import solid3 from "../assets/solid3.png";
+import solid4 from "../assets/solid4.png";
+import profile from "../assets/profile2.png";
 
 const stats = [
   { value: "100+", label: "Updated Material" },
@@ -9,25 +14,25 @@ const stats = [
 
 const features = [
   {
-    icon: "https://cdn.builder.io/api/v1/image/assets/TEMP/fa825a08c4180585dfc848ae3bf55f53ba72a3150402934d137cce87237ffeba?placeholderIfAbsent=true&apiKey=2372ca227ccb46eeb978f53bfef9667b",
+    icon: solid1,
     title: "Material Limitations",
     description:
       "Lorem Ipsum is simply dummy text of the printing and typesetting industry.",
   },
   {
-    icon: "https://cdn.builder.io/api/v1/image/assets/TEMP/45ea07d7db50231b6f6f320f241e90096d52c3abc982167901fc32ecd964b563?placeholderIfAbsent=true&apiKey=2372ca227ccb46eeb978f53bfef9667b",
+    icon: solid2,
     title: "Unprofessional Mentor",
     description:
       "Lorem Ipsum is simply dummy text of the printing and typesetting industry.",
   },
   {
-    icon: "https://cdn.builder.io/api/v1/image/assets/TEMP/55ada8372dce451b655c1c27fa36b3e2a09b01f6d4ad6cf76618847cdd3dd51d?placeholderIfAbsent=true&apiKey=2372ca227ccb46eeb978f53bfef9667b",
+    icon: solid3,
     title: "Video Quality",
     description:
       "Lorem Ipsum is simply dummy text of the printing and typesetting industry.",
   },
   {
-    icon: "https://cdn.builder.io/api/v1/image/assets/TEMP/5a2af1e7b8ee23502edfe6f97d719ad74d364849d6ca47ceb50360886eeab0c9?placeholderIfAbsent=true&apiKey=2372ca227ccb46eeb978f53bfef9667b",
+    icon: solid4,
     title: "High Price",
     description:
       "Lorem Ipsum is simply dummy text of the printing and typesetting industry.",
@@ -50,7 +55,7 @@ function WhyWeExist() {
           <div className="flex gap-3.5 mt-8 place-items-center">
             <img
               loading="lazy"
-              src="https://cdn.builder.io/api/v1/image/assets/TEMP/031f2091102ffd288c173ff54da2efe1a996b9717bce3003aae0e8cd293ac703?placeholderIfAbsent=true&apiKey=2372ca227ccb46eeb978f53bfef9667b"
+              src={profile}
               alt="Jerony Pulquosta"
               className="object-contain shrink-0 rounded-full aspect-square w-[71px]"
             />
