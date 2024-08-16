@@ -37,7 +37,10 @@ const TestimonialSection = () => {
       ? [...testimonials].filter((a) => a.isHighlighted)
       : testimonials;
   return (
-    <section className="flex relative flex-col justify-center items-center px-5 py-[50px] lg:py-12 w-full bg-stone-50 sm:px-8 md:px-12 lg:px-16 xl:px-20 2xl:px-24">
+    <section
+      id="Testimonial"
+      className="flex relative flex-col justify-center items-center px-5 py-[50px] lg:py-12 w-full bg-stone-50 sm:px-8 md:px-12 lg:px-16 xl:px-20 2xl:px-24"
+    >
       <div className="flex lg:hidden opacity-100 rotate-[-30deg] absolute top-[20px] right-[40px] flex-col items-center self-end px-1 pt-2 mt-7 bg-green-800/90 rounded-full h-[22px] w-[22px]">
         <div className="flex z-10 shrink-0 rounded-full bg-green-800/60 bg-opacity-70 h-[17px] w-[17px] sm:-mr-0.2" />
       </div>

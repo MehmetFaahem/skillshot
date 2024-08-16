@@ -61,7 +61,10 @@ function SubscriptionPlans() {
       : plans;
 
   return (
-    <main className="flex flex-col mb-[50px] lg:mb-[160px] items-center rounded-none w-[85%] place-items-center place-content-center justify-center mx-auto px-4 sm:px-6 lg:px-8">
+    <main
+      id="Subscribe"
+      className="flex flex-col mb-[50px] lg:mb-[160px] items-center rounded-none w-[85%] place-items-center place-content-center justify-center mx-auto px-4 sm:px-6 lg:px-8"
+    >
       <header className="text-center">
         <h1 className="text-[26px] lg:text-4xl font-semibold text-zinc-800">
           <span className="text-[#CB8461]">Subscribe</span>{" "}

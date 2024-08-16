@@ -15,7 +15,10 @@ import JoinNowCard from "./snippets/JoinNowCard";
 
 const HeroSection = () => {
   return (
-    <div className="bg-[#245D51] w-[100%] h-auto p-6 px-[24px] lg:px-[75px] overflow-hidden">
+    <div
+      id="Home"
+      className="bg-[#245D51] w-[100%] h-auto p-6 px-[24px] lg:px-[75px] overflow-hidden"
+    >
       <Header />
       <div className="mt-[80px] flex flex-col lg:flex-row place-content-center justify-between">
         <div className="w-full lg:w-[40%] relative">

@@ -20,7 +20,7 @@ const Header = () => {
         {["Home", "Course", "Subscribe", "About", "Testimonial"].map((page) => (
           <a
             key={page}
-            href="#"
+            href={`#${page}`}
             className={page === "Home" ? "text-[#FFFFFF]" : "text-[#b8b4b4]"}
           >
             {page}

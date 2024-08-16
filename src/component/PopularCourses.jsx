@@ -59,7 +59,10 @@ let coursesData = [
 function PopularCourses() {
   const [data, setData] = useState(coursesData);
   return (
-    <section className="flex overflow-hidden flex-col h-auto px-[62px] lg:px-20 mx-auto py-20 w-full bg-[#245D51] relative">
+    <section
+      id="Course"
+      className="flex overflow-hidden flex-col h-auto px-[62px] lg:px-20 mx-auto py-20 w-full bg-[#245D51] relative"
+    >
       <SquareWithShadow
         color={"#CB8461"}
         className={

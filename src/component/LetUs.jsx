@@ -52,7 +52,10 @@ const Card = ({ data }) => {
 
 const LetUs = () => {
   return (
-    <div className="h-auto bg-[#ffffff] px-[7.5%] flex justify-between my-[10px] pb-[20px] lg:pb-0 lg:my-[120px] place-items-end">
+    <div
+      id="About"
+      className="h-auto bg-[#ffffff] px-[7.5%] flex justify-between my-[10px] pb-[20px] lg:pb-0 lg:my-[120px] place-items-end"
+    >
       <div
         className={`bg-[${theme_color}] hidden lg:flex relative w-[500px] h-[340px] rounded-t-full`}
       >

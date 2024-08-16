@@ -1,7 +1,7 @@
 import React from "react";
 
 function Footer() {
-  const navItems = ["Home", "Course", "Subscribe", "About", "Testimoni"];
+  const navItems = ["Home", "Course", "Subscribe", "About", "Testimonial"];
 
   return (
     <footer className="flex flex-col-reverse lg:flex-row items-center flex-wrap gap-5 lg:justify-between self-stretch mt-10 w-full sm:mt-36 sm:max-w-full">
@@ -12,7 +12,7 @@ function Footer() {
         {navItems.map((item, index) => (
           <a
             key={index}
-            href="#"
+            href={`#${item}`}
             className={index === 0 ? "grow text-white" : ""}
             aria-current={index === 0 ? "page" : undefined}
           >
